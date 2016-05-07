@@ -1,0 +1,23 @@
+{
+  "name": "multi-bin-packer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/multi_bin_packer.js",
+  "repository": "marekventur/multi-bin-packer",
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "mocha test/*.spec.js"
+  },
+  "author": "Marek Ventur <marekventur@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "underscore": "^1.8.3"
+  }
+}
