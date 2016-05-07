@@ -5,7 +5,7 @@
 
 This is a 2d bin packer for the special purpose of creating spritesheets for CSS and games.
 
-It differs from the long list of similar packages by its packing approach: Instead of creating one output bin with a minimum size this package is trying to create a minimum number of bins under a certain size. This avoids problems with single massive image files that are not browser-friendly. This can be especially useful for WebGL games were the GPU will benefit from spritesheets close to mutliple-of-2 sizes.
+It differs from the long list of similar packages by its packing approach: Instead of creating one output bin with a minimum size this package is trying to create a minimum number of bins under a certain size. This avoids problems with single massive image files that are not browser-friendly. This can be especially useful for WebGL games where the GPU will benefit from spritesheets close to mutliple-of-2 sizes.
 
 Usage:
 ```
