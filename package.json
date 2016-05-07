@@ -1,6 +1,6 @@
 {
   "name": "multi-bin-packer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A 2d bin packer for the special purpose of creating spritesheets for CSS and games",
   "main": "lib/multi_bin_packer.js",
   "repository": "marekventur/multi-bin-packer",
