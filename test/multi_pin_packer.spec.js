@@ -82,4 +82,12 @@ describe("MultiBinPacker", () => {
             expect(packer.bins.length).to.equal(2);
         });
     });
+
+    it("passes padding through", () => {
+        packer = new MultiBinPacker(1024, 1024, 4);
+        packer.add(500, 500, {number: 1});
+        packer.add(500, 500, {number: 1});
+        packer.add(500, 500, {number: 1});
+        expect(packer.bins[0].width).to.equal(1004);
+    });
 });

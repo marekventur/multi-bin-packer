@@ -37,8 +37,8 @@ console.log("%j", packer.bins[2].rects); // [{"width":1000,"height":1000,"x":0,"
 
 Note: multi-bin-packer requires node >= 4.0.0
 
-### ```new MultiBinPacker(maxWidth, maxHeight)```
-Creates a new Packer. maxWidth and maxHeight are passed on to all bins.
+### ```new MultiBinPacker(maxWidth, maxHeight[, padding])```
+Creates a new Packer. maxWidth and maxHeight are passed on to all bins. If ```padding``` is supplied all rects will be kept at least ```padding``` pixels apart.
 
 ### ```packer.add(width, height, data)```
 Adds a rect to an existing bin or creates a new one to accomodate it. ```data``` can be anything, it will be stored along with the position data of each rect.
