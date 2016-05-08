@@ -33,6 +33,7 @@ describe("MultiBinPacker", () => {
         it("allows oversized elements to be added", () => {
             packer.add(1000, 1000, {number: 1});
             packer.add(2000, 2000, {number: 2});
+            expect(packer.bins.length).to.equal(2);
             expect(packer.bins[1].rects[0].width).to.equal(2000);
             expect(packer.bins[1].rects[0].oversized).to.equal(true);
         });
