@@ -11,12 +11,14 @@
     "node": ">=4"
   },
   "scripts": {
+    "pretest": "eslint lib test",
     "test": "mocha test/*.spec.js"
   },
   "author": "Marek Ventur <marekventur@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^2.9.0",
     "mocha": "^2.4.5",
     "underscore": "^1.8.3"
   }
