@@ -17,6 +17,7 @@
   "author": "Marek Ventur <marekventur@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "ascii-table": "0.0.9",
     "chai": "^3.5.0",
     "eslint": "^2.9.0",
     "mocha": "^2.4.5",
