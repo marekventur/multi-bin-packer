@@ -107,5 +107,44 @@ describe("BinaryTreeBin", () => {
             expect(bin.width).to.equal(1004);
             expect(bin.height).to.equal(1004);
         });
+
+        it("monkey testing", () => {
+            bin = new BinaryTreeBin(1024, 1024, 40);
+            let rects = [];
+            while (true) {
+                let width = Math.floor(Math.random() * 200);
+                let height = Math.floor(Math.random() * 200);
+
+                let position = bin.add(width, height);
+                if (position) {
+                    expect(position.width).to.equal(width);
+                    expect(position.height).to.equal(height);
+                    rects.push(position);
+                } else {
+                    break;
+                }
+            }
+
+            expect(bin.width).to.not.be.above(1024);
+            expect(bin.height).to.not.be.above(1024);
+
+            rects.forEach(rect1 => {
+                // Make sure rects are not overlapping
+                rects.forEach(rect2 => {
+                    if (rect1 !== rect2) {
+                        let intersect =
+                         (rect1.x < rect2.x + rect2.width &&
+                          rect2.x < rect1.x + rect1.width &&
+                          rect1.y < rect2.y + rect2.height &&
+                          rect2.y < rect1.y + rect1.height);
+                        expect(intersect).to.equal(false, "intersection detected: " + JSON.stringify(rect1) + " " + JSON.stringify(rect2));
+                    }
+                });
+
+                // Make sure no rect is outside bounds
+                expect(rect1.x + rect1.width).to.not.be.above(bin.width);
+                expect(rect1.y + rect1.height).to.not.be.above(bin.height);
+            });
+        });
     });
 });
