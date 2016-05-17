@@ -108,6 +108,11 @@ describe("BinaryTreeBin", () => {
             expect(bin.height).to.equal(1004);
         });
 
+        it("adds rects with sizes close to the max", () => {
+            expect(bin.add(1024, 1024)).to.not.equal(undefined);
+            expect(bin.rects.length).to.equal(1);
+        });
+
         it("monkey testing", () => {
             bin = new BinaryTreeBin(1024, 1024, 40);
             let rects = [];
